@@ -1,41 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* General container */
+#vending-machine {
+    display: flex;
+    height: 60vh;
+    background: rgb(87, 134, 111);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 0px 20px 20px 0;
+}
+
+/* ------------------- Right panel styles -----------------*/
 #messages {
     font-family: 'LED', sans-serif;
     font-size: 20px;
     text-align: center;
-    background-color: black;
+    background-color: rgb(24, 58, 34);
     color: lime;
     border: none;
 }
 
-.vending-machine{
-
-}
-.total__section{
+.section {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 5px;
 }
 
-button{
-    border-radius: 20px;
-    margin: 0 120px 0 0;
-    cursor: pointer;
+.add-money {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 5px;
 }
 
-.buy-items-panel{
+.add-money {
+    height: 70px;
+    width: 250px;
+}
+
+.add-money-btn {
+    height: 100%;
+    background: rgb(184, 247, 210);
+    border-radius: 10px;
+    border: 2px solid rgb(17, 117, 55);
+
+    font-weight: 700;
+}
+
+button {
+    cursor: pointer;
+    border: none
+}
+
+.buy-items-panel {
+    width: 50%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
-    padding: 0 20px 10px;
-    width: 35vh;
+    padding-left: 20px;
+    padding-right: 30px;
     border-left: 2px solid rgb(0, 0, 0);
 }
 
-#vending-machine{
+.selected-item__section {
     display: flex;
-    justify-content: end;
-    height: 80vh;
-    background: rgb(150, 173, 162);
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 0px 20px 20px 0;
+    flex-direction: column;
 }
+
+/* ------------------- END Right panel styles -----------------*/
+
+
+/* -------------------- Beginning Left Panel Styles ----------*/
+.items-grid__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    width: 50vw;
+}
+
+.item h4 {
+    width: 100%;
+    height: 30%;
+    background: rgb(124, 124, 187);
+    top: auto;
+    text-align: center;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 40%;
+    height: 20%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.item h2,
+p {
+    height: 30%;
+
+    background: rgb(122, 160, 165);
+    width: 100%;
+}
+
+
+/* ------------------- END Left panel styles -----------------*/

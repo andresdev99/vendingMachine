@@ -29,16 +29,18 @@ const TotalSection = () => {
     ];
 
     return (
-        <div className="total__section">
+        <div className="total__section section">
             <h2>Total ${parseFloat(money).toFixed(2)}</h2>
             <input type="text" disabled value={parseFloat(money).toFixed(2)} />
+            <div className='add-money'>
             {
                 buttons.map((buttonInfo, index) => {
-                    return <button key={index} onClick={() => setMoney(buttonInfo.value)}>
+                    return <button className='add-money-btn' key={index} onClick={() => setMoney(buttonInfo.value)}>
                         {buttonInfo.text}
                     </button>
                 })
             }
+            </div>
         </div>
     )
 }
