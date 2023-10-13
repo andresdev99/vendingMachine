@@ -6,10 +6,12 @@ import Messages from '../components/RighPanel/MessagesSection'
 const vendingMachine = () => {
     return (
         <>
-            <BuyItemsPanel>
-                <TotalSection />
-                <Messages />
-            </BuyItemsPanel>
+            <div id='vending-machine'>
+                <BuyItemsPanel>
+                    <TotalSection />
+                    <Messages />
+                </BuyItemsPanel>
+            </div>
         </>
     )
 }

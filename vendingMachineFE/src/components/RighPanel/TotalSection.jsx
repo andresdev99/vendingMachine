@@ -29,7 +29,7 @@ const TotalSection = () => {
     ];
 
     return (
-        <div>
+        <div className="total-container">
             <h2>Total ${parseFloat(money).toFixed(2)}</h2>
             <input type="text" disabled value={parseFloat(money).toFixed(2)} />
             {

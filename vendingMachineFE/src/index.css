@@ -1,4 +1,35 @@
 #messages {
-    height: '30px';
-    color: 'green'
+    font-family: 'LED', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    background-color: black;
+    color: lime;
+    border: none;
+}
+
+.total-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+button{
+    border-radius: 20px;
+    margin: 0 120px 0 0;
+    cursor: pointer;
+}
+
+.buy-items-panel{
+    padding: 0 20px 10px;
+    width: 35vh;
+    border-left: 2px solid rgb(0, 0, 0);
+}
+
+#vending-machine{
+    display: flex;
+    justify-content: end;
+    height: 80vh;
+    background: rgb(150, 173, 162);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 0px 20px 20px 0;
 }
