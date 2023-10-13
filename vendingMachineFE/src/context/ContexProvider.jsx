@@ -2,6 +2,7 @@ import { createContext, useContext, useState } from "react";
 
 const StateContext = createContext({
     money: 0.00,
+    selectedItem: '',
     items: [
         {
             code: 8,
@@ -23,14 +24,15 @@ const StateContext = createContext({
         },
     ],
     setMoney: () => { },
-    setItemAvailability: () => { }
-
+    setItemAvailability: () => { },
+    setSelectedItem: () => { }
 })
 
 export const ContextProvider = ({ children }) => {
     const initialState = useContext(StateContext);
     const [money, _setMoney] = useState(localStorage.getItem('money') ?? initialState.money)
-    const [items, _setItemAvailability] = useState(initialState.items)
+    const [items, _setItemAvailability] = useState(initialState.items);
+    const [selectedItem, _setSelectedItem] = useState(localStorage.getItem('selectedItem') ?? initialState.selectedItem)
 
     const setItemAvailability = (indexItem) => {
         // // Clonamos el arreglo de items para no modificar el original directamente
@@ -40,6 +42,14 @@ export const ContextProvider = ({ children }) => {
 
         // // Actualizamos el estado con los items modificados
         // setItems(updatedItems);
+    }
+
+    // Set Selected Item into 'Selected Item Section'
+    const setSelectedItem = (id) => {
+        _setSelectedItem(id);
+        // Save in localStorage if the user get out of the page
+        if (id) localStorage.setItem('selectedItem', id);
+        else localStorage.removeItem('selectedItem');
     }
 
     // Send Money Into Local Storage in case the Page were closed or reloaded
@@ -58,8 +68,10 @@ export const ContextProvider = ({ children }) => {
         <StateContext.Provider value={{
             money,
             items,
+            selectedItem,
             setMoney,
-            setItemAvailability
+            setItemAvailability,
+            setSelectedItem
         }}>
             {children}
         </StateContext.Provider>
