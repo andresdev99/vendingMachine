@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Messages = () => {
+const MessagesSection = () => {
     return (
-        <>
-            <h2>Messages</h2>
+        <div className='messages__section'>
+            <h3>Messages</h3>
             <input type="text" id='messages' disabled value="Insert Coin"/>
-        </>
+        </div>
     )
 }
 
-export default Messages
+export default MessagesSection

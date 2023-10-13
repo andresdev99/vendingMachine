@@ -3,7 +3,7 @@ import { useStateContext } from '../../context/ContexProvider';
 
 const TotalSection = () => {
     const { money, setMoney } = useStateContext();
-
+    console.log(money)
     // Buttons to add money
     const buttons = [
         {
@@ -11,7 +11,7 @@ const TotalSection = () => {
             value: 1
         },
         {
-            text: 'Add $0.15',//22
+            text: 'Add $0.25',
             value: 0.25
         },
         {
@@ -29,7 +29,7 @@ const TotalSection = () => {
     ];
 
     return (
-        <div className="total-container">
+        <div className="total__section">
             <h2>Total ${parseFloat(money).toFixed(2)}</h2>
             <input type="text" disabled value={parseFloat(money).toFixed(2)} />
             {

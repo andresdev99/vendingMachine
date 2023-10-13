@@ -1,12 +1,46 @@
 import { createContext, useContext, useState } from "react";
 
 const StateContext = createContext({
-    money: 0,
-    setMoney: () => { }
+    money: 0.00,
+    items: [
+        {
+            code: 8,
+            name: 'water',
+            cost: 0.65,
+            availability: 6
+        },
+        {
+            code: 5,
+            name: 'juice',
+            cost: 1.00,
+            availability: 7
+        },
+        {
+            code: 3,
+            name: 'soda',
+            cost: 1.50,
+            availability: 8
+        },
+    ],
+    setMoney: () => { },
+    setItemAvailability: () => { }
+
 })
 
 export const ContextProvider = ({ children }) => {
-    const [money, _setMoney] = useState(localStorage.getItem('money') ?? 0.00)
+    const initialState = useContext(StateContext);
+    const [money, _setMoney] = useState(localStorage.getItem('money') ?? initialState.money)
+    const [items, _setItemAvailability] = useState(initialState.items)
+
+    const setItemAvailability = (indexItem) => {
+        // // Clonamos el arreglo de items para no modificar el original directamente
+        // const updatedItems = [...items];
+
+        // // Actualizamos la disponibilidad del elemento en el índice proporcionado
+
+        // // Actualizamos el estado con los items modificados
+        // setItems(updatedItems);
+    }
 
     // Send Money Into Local Storage in case the Page were closed or reloaded
     const setMoney = (moneyValue) => {
@@ -23,7 +57,9 @@ export const ContextProvider = ({ children }) => {
     return (
         <StateContext.Provider value={{
             money,
-            setMoney
+            items,
+            setMoney,
+            setItemAvailability
         }}>
             {children}
         </StateContext.Provider>
