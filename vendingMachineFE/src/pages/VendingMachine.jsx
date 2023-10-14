@@ -8,7 +8,7 @@ import MessagesSection from '../components/RighPanel/MessagesSection'
 import SelectedItemSection from '../components/RighPanel/SelectedItemSection'
 import ChangeSection from '../components/RighPanel/ChangeSection'
 import ReturnMoneySection from '../components/RighPanel/ReturnMoneySection'
-
+import FormBuy from '../components/RighPanel/FormBuy'
 // Imports necessary for left Panel
 import Items from '../components/LeftPanel/Items'
 import ItemsPanel from '../components/LeftPanel/ItemsPanel'
@@ -22,13 +22,15 @@ const vendingMachine = () => {
             <div id='vending-machine'>
                 {/* Left Section */}
                 <ItemsPanel>
-                    <Items items={items}/>
+                    <Items items={items} />
                 </ItemsPanel>
                 {/* Right Section */}
                 <BuyItemsPanel>
-                    <TotalSection />
-                    <MessagesSection />
-                    <SelectedItemSection />
+                    <FormBuy>
+                        <TotalSection />
+                        <MessagesSection />
+                        <SelectedItemSection />
+                    </FormBuy>
                     <ChangeSection />
                     <ReturnMoneySection />
                 </BuyItemsPanel>

@@ -5,7 +5,7 @@ const ReturnMoneySection = () => {
     <div className='return-money__section section'>
         <h3>Returned Money</h3>
         <input type="text" disabled />
-        <button>Return Money</button>
+        <button className='returned-money-btn'>Return Money</button>
     </div>
   )
 }
