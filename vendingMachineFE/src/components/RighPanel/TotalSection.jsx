@@ -3,7 +3,7 @@ import { useStateContext } from '../../context/ContexProvider';
 
 const TotalSection = () => {
     const { money, setMoney } = useStateContext();
-    console.log(money)
+
     // Buttons to add money
     const buttons = [
         {

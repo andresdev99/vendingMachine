@@ -11,15 +11,33 @@ const StateContext = createContext({
             availability: 6
         },
         {
-            code: 5,
+            code: 7,
             name: 'juice',
             cost: 1.00,
             availability: 7
         },
         {
-            code: 3,
+            code: 6,
             name: 'soda',
             cost: 1.50,
+            availability: 8
+        },
+        {
+            code: 5,
+            name: 'cookies',
+            cost: 0.90,
+            availability: 8
+        },
+        {
+            code: 4,
+            name: 'milk',
+            cost: 1.20,
+            availability: 8
+        },
+        {
+            code: 3,
+            name: 'chips',
+            cost: 1.60,
             availability: 8
         },
     ],
