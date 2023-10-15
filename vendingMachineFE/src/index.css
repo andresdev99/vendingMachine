@@ -33,8 +33,6 @@ body{
     cursor: default;
 }
 
-
-
 .section {
     display: flex;
     flex-direction: column;
@@ -44,12 +42,13 @@ body{
 }
 
 .return-money__section {
-    height: 150px;
+    height: 100%;
 }
 
 textarea {
     resize: vertical;
     width: 100%;
+    height: 100%;
 }
 
 .selected-item__section{
@@ -117,7 +116,6 @@ button {
     padding-left: 20px;
     padding-right: 30px;
     border-left: 2px solid rgb(0, 0, 0);
-    flex-wrap: wrap;
 }
 
 #make-purchase {
@@ -177,6 +175,10 @@ h1 {
     position: relative;
 }
 
+.return-money__section{
+    justify-content: flex-start;
+}
+
 .item:hover::before, .item:hover::after{
     opacity: 0.2;
 }
@@ -209,6 +211,8 @@ input{
 
 #return-money{
     width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
 }
 
 /* ------------------- END Left panel styles -----------------*/
