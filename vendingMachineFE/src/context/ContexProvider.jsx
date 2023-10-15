@@ -43,7 +43,8 @@ const StateContext = createContext({
     ],
     setMoney: () => { },
     setItemAvailability: () => { },
-    setSelectedItem: () => { }
+    setSelectedItem: () => { },
+    getItemInfo: () => { }
 })
 
 export const ContextProvider = ({ children }) => {
@@ -52,17 +53,36 @@ export const ContextProvider = ({ children }) => {
     const [items, _setItemAvailability] = useState(initialState.items);
     const [selectedItem, _setSelectedItem] = useState(localStorage.getItem('selectedItem') ?? initialState.selectedItem)
 
-    const setItemAvailability = (indexItem) => {
-        // // Clonamos el arreglo de items para no modificar el original directamente
-        // const updatedItems = [...items];
-
-        // // Actualizamos la disponibilidad del elemento en el índice proporcionado
-
-        // // Actualizamos el estado con los items modificados
-        // setItems(updatedItems);
+    /**
+     * Get all the item info
+     * @param {number} selectedItem - Selected Item
+     * @returns {JSON} - Item Information
+     */
+    const getItemInfo = (selectedItem) => {
+        const itemInfo = items.find(item => item.code == selectedItem);
+        return itemInfo;
     }
 
-    // Set Selected Item into 'Selected Item Section'
+    /**
+     *Set new item Availability
+     * @param {number} indexItem - Index from the item json
+     * @param {number } newAvailability -New Availability
+     */
+    const setItemAvailability = (indexItem, newAvailability) => {
+        // Clonamos el arreglo de items para no modificar el original directamente
+        const updatedItems = [...items];
+
+        updatedItems[indexItem].availability = newAvailability;
+        // Actualizamos la disponibilidad del elemento en el índice proporcionado
+
+        // Actualizamos el estado con los items modificados
+        setItems(updatedItems);
+    }
+
+    /**
+     *Set Selected Item into 'Selected Item Section'
+     * @param {number} id item Code
+     */
     const setSelectedItem = (id) => {
         _setSelectedItem(id);
         // Save in localStorage if the user get out of the page
@@ -70,7 +90,10 @@ export const ContextProvider = ({ children }) => {
         else localStorage.removeItem('selectedItem');
     }
 
-    // Send Money Into Local Storage in case the Page were closed or reloaded
+    /**
+     *Send Money Into Local Storage in case the Page were closed or reloaded
+     * @param {float} moneyValue Money inserted intro the vending Machine
+     */
     const setMoney = (moneyValue) => {
         // Add 0 when click on clear button
         let sumMoney = moneyValue == 0 ? moneyValue : (parseFloat(money) + moneyValue).toFixed(2);
@@ -89,7 +112,8 @@ export const ContextProvider = ({ children }) => {
             selectedItem,
             setMoney,
             setItemAvailability,
-            setSelectedItem
+            setSelectedItem,
+            getItemInfo
         }}>
             {children}
         </StateContext.Provider>

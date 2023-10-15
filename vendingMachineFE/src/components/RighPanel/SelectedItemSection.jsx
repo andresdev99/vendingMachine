@@ -4,10 +4,6 @@ import { useStateContext } from '../../context/ContexProvider'
 const SelectedItemSection = () => {
   const {selectedItem} = useStateContext();
 
-    const onPurchase = (event) => {
-        // event.preventDefault();
-    }
-
   return (
       <div className='selected-item__section section'>
         <h3>Selected Item</h3>
