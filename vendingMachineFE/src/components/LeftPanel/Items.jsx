@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useStateContext } from '../../context/ContexProvider'
 
 const Items = ({ items }) => {
     const {setSelectedItem} = useStateContext();
+
+    useEffect(() => {
+    }, [items])
+
     return (
         <>
             {

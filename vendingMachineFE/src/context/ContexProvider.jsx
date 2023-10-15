@@ -3,6 +3,8 @@ import { createContext, useContext, useState } from "react";
 const StateContext = createContext({
     money: 0.00,
     selectedItem: '',
+    message: 'Insert Coin',
+    change: '',
     items: [
         {
             code: 8,
@@ -26,32 +28,47 @@ const StateContext = createContext({
             code: 5,
             name: 'cookies',
             cost: 0.90,
-            availability: 8
+            availability: 3
         },
         {
             code: 4,
             name: 'milk',
             cost: 1.20,
-            availability: 8
+            availability: 1
         },
         {
             code: 3,
             name: 'chips',
             cost: 1.60,
-            availability: 8
+            availability: 5
         },
     ],
     setMoney: () => { },
     setItemAvailability: () => { },
     setSelectedItem: () => { },
-    getItemInfo: () => { }
+    getItemInfo: () => { },
+    setMessage: () => { },
+    setChange: () => { }
 })
 
 export const ContextProvider = ({ children }) => {
+
     const initialState = useContext(StateContext);
-    const [money, _setMoney] = useState(localStorage.getItem('money') ?? initialState.money)
-    const [items, _setItemAvailability] = useState(initialState.items);
+
+    /**
+     * Get initial items
+     * @returns {JSON}
+     */
+    const getCurrentItems = () => {
+        return localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : initialState.items ;
+    }
+
+    const [money, _setMoney]               = useState(localStorage.getItem('money') ?? initialState.money)
+    const [items, _setItemAvailability]    = useState(getCurrentItems());
     const [selectedItem, _setSelectedItem] = useState(localStorage.getItem('selectedItem') ?? initialState.selectedItem)
+    const [message, setMessage]            = useState(initialState.message)
+    const [change, setChange]              = useState('')
+
 
     /**
      * Get all the item info
@@ -63,20 +80,24 @@ export const ContextProvider = ({ children }) => {
         return itemInfo;
     }
 
+
     /**
      *Set new item Availability
      * @param {number} indexItem - Index from the item json
      * @param {number } newAvailability -New Availability
      */
-    const setItemAvailability = (indexItem, newAvailability) => {
-        // Clonamos el arreglo de items para no modificar el original directamente
-        const updatedItems = [...items];
-
-        updatedItems[indexItem].availability = newAvailability;
-        // Actualizamos la disponibilidad del elemento en el índice proporcionado
+    const setItemAvailability = (itemCode, newAvailability) => {
+        const newItems = items.map((item) => {
+            if (item.code == itemCode) {
+                item.availability = newAvailability;
+            }
+            return item;
+        })
 
         // Actualizamos el estado con los items modificados
-        setItems(updatedItems);
+        _setItemAvailability(newItems);
+
+        localStorage.setItem('items', JSON.stringify(newItems));
     }
 
     /**
@@ -110,10 +131,14 @@ export const ContextProvider = ({ children }) => {
             money,
             items,
             selectedItem,
+            message,
+            change,
             setMoney,
             setItemAvailability,
             setSelectedItem,
-            getItemInfo
+            getItemInfo,
+            setMessage,
+            setChange
         }}>
             {children}
         </StateContext.Provider>

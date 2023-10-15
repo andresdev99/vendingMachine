@@ -21,13 +21,16 @@ body{
 }
 
 /* ------------------- Right panel styles -----------------*/
-#messages {
+#messages, #selected-item, #change, #returned-money {
     font-size: 20px;
     text-align: center;
-    background-color: rgb(24, 58, 34);
+    background-color: rgb(0, 0, 0);
     color: lime;
-    border: none;
+    border: 2px solid rgb(17, 117, 55);
+    border-radius: 10px;
+    width: 80%;
 }
+
 
 .section {
     display: flex;
@@ -37,9 +40,12 @@ body{
     width: 100%;
 }
 
-.return-money__section,
-.selected-item__section {
+.return-money__section {
     height: 100px;
+}
+
+.selected-item__section{
+    height: 110px;
 }
 
 .selected-item__section{
@@ -110,7 +116,7 @@ button:hover{
     background: rgb(0, 255, 179);
 }
 
-h2 {
+h1 {
     text-align: center;
 }
 
