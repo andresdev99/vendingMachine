@@ -11,13 +11,14 @@ body{
 #vending-machine {
     display: flex;
     height: 85vh;
-    background: rgb(74, 97, 86);
+    background: transparent;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 0px 20px 20px 0;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow: hidden;
 }
 
 /* ------------------- Right panel styles -----------------*/
@@ -29,6 +30,7 @@ body{
     border: 2px solid rgb(17, 117, 55);
     border-radius: 10px;
     width: 80%;
+    cursor: default;
 }
 
 
@@ -93,6 +95,7 @@ button {
 }
 
 .buy-items-panel {
+    background: rgb(46, 102, 59);
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -120,8 +123,6 @@ h1 {
     text-align: center;
 }
 
-
-
 /* ------------------- END Right panel styles -----------------*/
 
 
@@ -133,6 +134,7 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
     gap: 6px;
     width: 50vw;
+    background: rgb(33, 47, 41);
 }
 
 .item h4 {
@@ -193,4 +195,85 @@ input{
     outline: none;
 }
 
+#return-money{
+    width: 100%;
+}
+
 /* ------------------- END Left panel styles -----------------*/
+
+/* --------------------- 404 Page -------------------*/
+.not-found-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #333; /* Fondo gris oscuro */
+    color: #fff; /* Texto blanco */
+  }
+
+  .not-found-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .not-found-text {
+    flex: 1;
+  }
+
+  .not-found-heading {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .go-home-link {
+    color: #00ffcc; /* Color de enlace */
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .go-home-link:hover {
+    text-decoration: underline; /* Subrayado en hover */
+  }
+
+  .not-found-character {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eye {
+    background: #000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+  }
+
+  .mouth {
+    background: #000;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: 5px;
+  }
+
+  .body {
+    background: #000;
+    width: 100px;
+    height: 150px;
+    border-radius: 15px 15px 100px 100px;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .not-found-content {
+      flex-direction: column;
+    }
+  }

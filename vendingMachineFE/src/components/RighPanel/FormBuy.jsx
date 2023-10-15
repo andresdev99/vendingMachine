@@ -1,5 +1,5 @@
 import React from 'react'
-import usePurchase from '../../context/usePurchase'
+import { purchaseItem } from '../../context/purchase'
 import { useStateContext } from '../../context/ContexProvider';
 
 const FormBuy = ({ children }) => {
@@ -13,19 +13,17 @@ const FormBuy = ({ children }) => {
         setMoney
     } = useStateContext();
 
-    const { onPurchase } = usePurchase(
-        money,
-        selectedItem,
-        setItemAvailability,
-        getItemInfo,
-        setMessage,
-        setChange,
-        setMoney
-        );
-
     const handleSubmit = (event) => {
         event.preventDefault();
-        onPurchase();
+        purchaseItem(
+            money,
+            selectedItem,
+            setItemAvailability,
+            getItemInfo,
+            setMessage,
+            setChange,
+            setMoney
+        );
       };
 
     return (

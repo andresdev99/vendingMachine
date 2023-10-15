@@ -12,6 +12,7 @@ import FormBuy from '../components/RighPanel/FormBuy'
 // Imports necessary for left Panel
 import Items from '../components/LeftPanel/Items'
 import ItemsPanel from '../components/LeftPanel/ItemsPanel'
+import FormReturnMoney from '../components/RighPanel/FormReturnMoney'
 
 
 const vendingMachine = () => {
@@ -32,7 +33,9 @@ const vendingMachine = () => {
                         <SelectedItemSection />
                     </FormBuy>
                     <ChangeSection />
-                    <ReturnMoneySection />
+                    <FormReturnMoney>
+                        <ReturnMoneySection />
+                    </FormReturnMoney>
                 </BuyItemsPanel>
             </div>
         </>
