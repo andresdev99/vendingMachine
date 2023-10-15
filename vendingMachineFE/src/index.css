@@ -10,7 +10,7 @@ body{
 /* General container */
 #vending-machine {
     display: flex;
-    height: 85vh;
+    height: 90vh;
     background: transparent;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 0px 20px 20px 0;
@@ -34,6 +34,7 @@ body{
 }
 
 
+
 .section {
     display: flex;
     flex-direction: column;
@@ -43,7 +44,12 @@ body{
 }
 
 .return-money__section {
-    height: 100px;
+    height: 150px;
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
 }
 
 .selected-item__section{
@@ -81,8 +87,16 @@ body{
     font-weight: 700;
 }
 
-.selected-item-btn, .returned-money-btn {
+.selected-item-btn {
     height: 100%;
+    background: rgb(184, 247, 210);
+    border-radius: 10px;
+    border: 2px solid rgb(17, 117, 55);
+    font-weight: 700;
+}
+
+.returned-money-btn{
+    height: 30px;
     background: rgb(184, 247, 210);
     border-radius: 10px;
     border: 2px solid rgb(17, 117, 55);
@@ -100,12 +114,10 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding-left: 20px;
     padding-right: 30px;
     border-left: 2px solid rgb(0, 0, 0);
     flex-wrap: wrap;
-
 }
 
 #make-purchase {

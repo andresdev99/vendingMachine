@@ -10,7 +10,8 @@ const FormBuy = ({ children }) => {
         getItemInfo,
         setMessage,
         setChange,
-        setMoney
+        setMoney,
+        setReturnedMoney
     } = useStateContext();
 
     const handleSubmit = (event) => {
@@ -22,7 +23,8 @@ const FormBuy = ({ children }) => {
             getItemInfo,
             setMessage,
             setChange,
-            setMoney
+            setMoney,
+            setReturnedMoney
         );
       };
 

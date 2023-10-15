@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BuyRequest;
+use App\Http\Requests\ReturnMoneyRequest;
 use Illuminate\Http\Request;
 
 class BuyController extends Controller
@@ -26,7 +27,20 @@ class BuyController extends Controller
         return response($out);
     }
 
-    public function returnMoney(Request $request){
+    public function returnMoney(ReturnMoneyRequest $request)
+    {
+        $data             = $request->validated();
+        $moneyHistory     = $data["moneyHistory"];
+        $moneyHistorySum  = number_format(array_sum($data["moneyHistory"]), 2);
+        $totalMoney       = number_format($data["totalMoney"], 2);
 
+        if ($totalMoney > 0 && $totalMoney == $moneyHistorySum) {
+            $out["response"] = implode(",\n", $moneyHistory);
+            $out["message"]  = "Returned Money";
+        } else {
+            $out["error"]  = "You didn't insert money to return it";
+        }
+
+        return response($out);
     }
 }

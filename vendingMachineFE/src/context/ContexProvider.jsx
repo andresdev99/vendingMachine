@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import useReturnedMoney from "../hooks/useReturnedMoney";
 
 const StateContext = createContext({
     money: 0.00,
@@ -51,8 +52,10 @@ const StateContext = createContext({
     getItemInfo: () => { },
     setMessage: () => { },
     setChange: () => { },
-    setReturnedMoney: () => { },
-    setMoneyHistory: () => { }
+    onReturnMoney: () => { },
+    setMoneyHistory: () => { },
+    getMoneyHistory: () => { },
+    setReturnedMoney: () => { }
 })
 
 export const ContextProvider = ({ children }) => {
@@ -72,8 +75,11 @@ export const ContextProvider = ({ children }) => {
     const [selectedItem, _setSelectedItem] = useState(localStorage.getItem('selectedItem') ?? initialState.selectedItem)
     const [message, setMessage] = useState(initialState.message)
     const [change, setChange] = useState('')
-    const [returnedMoney, setReturnedMoney] = useState(initialState.returneyMoney)
-    const [moneyHistory, setMoneyHistory] = useState([])
+
+
+
+    // const [returnedMoney, setReturnedMoney] = useState(initialState.returnedMoney)
+    // const [moneyHistory, setMoneyHistory] = useState([])
     /**
      * Get all the item info
      * @param {number} selectedItem - Selected Item
@@ -122,24 +128,27 @@ export const ContextProvider = ({ children }) => {
     const setMoney = (moneyValue) => {
         // Add 0 when click on clear button
         let sumMoney = moneyValue == 0 ? moneyValue : (parseFloat(money) + moneyValue).toFixed(2);
-        let currentMoneyHistory = [...moneyHistory, moneyValue];
 
         _setMoney(sumMoney);
-        setMoneyHistory(currentMoneyHistory);
-
-        currentMoneyHistory = JSON.stringify(currentMoneyHistory);
+        setMoneyHistory(moneyValue);
 
 
         // Save in localStorage if the user get out of the page
         if (moneyValue) {
             localStorage.setItem('money', sumMoney);
-            localStorage.setItem('moneyHistory', currentMoneyHistory);
         }
         else {
             localStorage.removeItem('money');
-            localStorage.removeItem('moneyHistory');
         }
     }
+    const {
+        moneyHistory,
+        returnedMoney,
+        onReturnMoney,
+        setMoneyHistory,
+        getMoneyHistory,
+        setReturnedMoney
+    } = useReturnedMoney({ setMessage, setMoney, money });
 
     return (
         <StateContext.Provider value={{
@@ -156,8 +165,10 @@ export const ContextProvider = ({ children }) => {
             getItemInfo,
             setMessage,
             setChange,
-            setReturnedMoney,
-            setMoneyHistory
+            onReturnMoney,
+            setMoneyHistory,
+            getMoneyHistory,
+            setReturnedMoney
         }}>
             {children}
         </StateContext.Provider>

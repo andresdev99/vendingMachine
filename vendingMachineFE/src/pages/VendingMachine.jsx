@@ -17,7 +17,7 @@ import FormReturnMoney from '../components/RighPanel/FormReturnMoney'
 
 const vendingMachine = () => {
     const { items } = useStateContext();
-
+    
     return (
         <>
             <div id='vending-machine'>

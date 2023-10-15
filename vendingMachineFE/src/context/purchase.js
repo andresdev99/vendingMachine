@@ -7,10 +7,12 @@ export const purchaseItem = (
     getItemInfo,
     setMessage,
     setChange,
-    setMoney
+    setMoney,
+    setReturnedMoney
 ) => {
     const itemInfo = getItemInfo(selectedItem)
-    setChange('')
+    setChange('');
+    setReturnedMoney('')
     const payload = {
         money: money,
         item: itemInfo
@@ -23,7 +25,7 @@ export const purchaseItem = (
             // Check if it's number an greater than 0
             if (!isNaN(data.response) && data.response >= 0) {
                 setItemAvailability(itemInfo.code, data.response);
-                setChange(parseFloat(data.change).toFixed(2))
+                setChange(data.change)
                 setMoney(0.00);
             }
             setMessage(message);
