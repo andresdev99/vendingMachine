@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+    frontend:
+        image: node:18-alpine
+        working_dir: /app
+        command: "npm run dev"
+        volumes:
+          - ./frontend:/app
+        ports:
+          - 3000:3000
+    backend:
+        image: backend
+        build: ./backend
+        working_dir: /var/www/
+        volumes:
+          - ./backend:/var/www/
+          - ./backend/public/:var/www/html/
+        ports:
+          - 8000:8000
+networks:
+    app:
+        driver: bridge
