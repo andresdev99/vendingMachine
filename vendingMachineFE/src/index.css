@@ -4,7 +4,7 @@
 }
 
 body {
-    background: rgb(97, 110, 122);
+    background: rgba(204, 206, 207, 0.233);
 }
 
 /* General container */
@@ -22,18 +22,32 @@ body {
 }
 
 /* ------------------- Right panel styles -----------------*/
+
+/* Right Panel */
+.buy-items-panel {
+    color: black;
+    background: rgb(180, 171, 155);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 2px solid rgb(0, 0, 0);
+}
+
 #messages,
 #selected-item,
 #change,
 #returned-money {
     font-size: 20px;
     text-align: center;
-    background-color: rgb(0, 0, 0);
-    color: lime;
-    border: 2px solid rgb(17, 117, 55);
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: 700;
+    border: 3px solid rgb(127, 128, 125);
     border-radius: 10px;
-    width: 80%;
+    width: 100%;
     cursor: default;
+    align-self: center;
 }
 
 .section {
@@ -91,43 +105,33 @@ textarea {
 .add-money-btn {
     height: 100%;
     color: black;
-    background: rgb(122, 160, 165);
-    border: 2px solid rgb(124, 124, 187);
-    border-radius: 5px;
+    background: rgb(86, 214, 60);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 15px;
     font-weight: 700;
 }
 
 .selected-item-btn {
     height: 100%;
     color: black;
-    background: rgb(122, 160, 165);
-    border: 2px solid rgb(124, 124, 187);
-    border-radius: 10px;
+    background: rgb(86, 214, 60);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
     font-weight: 700;
 }
 
 .returned-money-btn {
     height: 30px;
     color: black;
-    background: rgb(122, 160, 165);
-    border: 2px solid rgb(124, 124, 187);
-    border-radius: 5px;
+    background: rgb(86, 214, 60);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 15px;
     font-weight: 700;
 }
 
 button {
     cursor: pointer;
     border: none
-}
-
-.buy-items-panel {
-    color: black;
-    background: rgb(34, 56, 49);
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-left: 2px solid rgb(0, 0, 0);
 }
 
 .change__section{
@@ -146,11 +150,11 @@ button {
 }
 
 button:hover {
-    background: rgb(0, 255, 179);
+    background: rgb(116, 255, 88);
 }
 
 h1 {
-    background: rgb(124, 124, 187);
+    background: rgb(238, 255, 0);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border-bottom: 2px solid rgb(0, 0, 0);
@@ -160,9 +164,6 @@ h1 {
 }
 
 h3{
-    background: rgb(124, 124, 187);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
     text-align: center;
 }
 
@@ -177,13 +178,13 @@ h3{
     grid-template-columns: repeat(2, 1fr);
     gap: 6px;
     width: 50vw;
-    background: rgb(33, 47, 41);
+    background: rgb(226, 225, 225);
 }
 
 .item h4 {
     width: 100%;
     height: 10%;
-    background: rgb(124, 124, 187);
+    background: rgb(86, 214, 60);
     top: auto;
     text-align: center;
     line-height: 1.5;
@@ -203,7 +204,7 @@ h3{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgb(122, 160, 165);
+    background: rgb(255, 255, 255);
     text-align: center;
     width: 90%;
     height: 90%;
