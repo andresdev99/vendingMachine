@@ -16,7 +16,6 @@ const MessagesSection = () => {
                 : {}
         }
             value={message} />
-            <hr />
         </div>
     )
 }

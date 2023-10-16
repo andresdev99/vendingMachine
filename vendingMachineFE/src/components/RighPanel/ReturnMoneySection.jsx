@@ -10,8 +10,8 @@ const ReturnMoneySection = () => {
           <textarea
               id="returned-money"
               disabled
-              cols="10"
-              rows="3"
+              cols="5"
+              rows="5"
               style={returnedMoney == "You didn't insert money to return it"
                   ? { color: 'red' }
                   : {}}

@@ -18,7 +18,6 @@ const SelectedItemSection = () => {
               className='selected-item-btn'>
               Make Purchase
           </button>
-          <hr />
       </div>
   )
 }
