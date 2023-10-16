@@ -1,6 +1,11 @@
 import { createContext, useContext, useState } from "react";
 import useReturnedMoney from "../hooks/useReturnedMoney";
-
+import water from '../assets/water.png'
+import juice from '../assets/juice.webp'
+import soda from '../assets/soda.webp'
+import cookies from '../assets/cookies.webp'
+import milk from '../assets/milk.png'
+import chips from '../assets/chips.png'
 const StateContext = createContext({
     money: 0.00,
     selectedItem: '',
@@ -12,36 +17,42 @@ const StateContext = createContext({
         {
             code: 8,
             name: 'water',
+            image: water,
             cost: 0.65,
             availability: 6
         },
         {
             code: 7,
             name: 'juice',
+            image: juice,
             cost: 1.00,
             availability: 7
         },
         {
             code: 6,
             name: 'soda',
+            image: soda,
             cost: 1.50,
             availability: 8
         },
         {
             code: 5,
             name: 'cookies',
+            image: cookies,
             cost: 0.90,
             availability: 3
         },
         {
             code: 4,
             name: 'milk',
+            image: milk,
             cost: 1.20,
             availability: 1
         },
         {
             code: 3,
             name: 'chips',
+            image: chips,
             cost: 1.60,
             availability: 5
         },
