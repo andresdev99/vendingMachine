@@ -10,7 +10,7 @@ Make sure to meet the following requirements before you start working with this 
 
 ### Server Requirements (Laravel)
 
-- **PHP:** This project uses Laravel, which requires PHP. It is recommended to use PHP 8 or higher. You can check the installed PHP version with `php --version`.
+- **PHP:** This project uses Laravel, which requires PHP. It is recommended to use PHP 8.1 or higher. You can check the installed PHP version with `php --version`.
 
 - **Composer:** Laravel uses Composer to manage dependencies. Make sure you have [Composer](https://getcomposer.org/) installed. You can check if Composer is installed with `composer --version`.
 

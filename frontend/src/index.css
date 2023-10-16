@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgba(204, 206, 207, 0.233);
+}
+
+/* General container */
+#vending-machine {
+    display: flex;
+    height: 90vh;
+    background: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 0px 20px 20px 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+/* ------------------- Right panel styles -----------------*/
+
+/* Right Panel */
+.buy-items-panel {
+    color: black;
+    background: rgb(180, 171, 155);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 2px solid rgb(0, 0, 0);
+}
+
+#messages,
+#selected-item,
+#change,
+#returned-money {
+    font-size: 20px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: 700;
+    border: 3px solid rgb(127, 128, 125);
+    border-radius: 10px;
+    width: 100%;
+    cursor: default;
+    align-self: center;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.return-money__section {
+    height: 100%;
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
+    height: 40%;
+}
+
+.change__section,
+#return-money {
+    padding-left: 20px;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+.selected-item__section {
+    height: 110px;
+}
+
+.selected-item__section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.selected-item__section {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-money {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 5px;
+}
+
+.add-money {
+    height: 70px;
+    width: 100%;
+}
+
+.add-money-btn {
+    height: 100%;
+    color: black;
+    background: rgb(86, 214, 60);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    font-weight: 700;
+}
+
+.selected-item-btn {
+    height: 100%;
+    color: black;
+    background: rgb(86, 214, 60);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.returned-money-btn {
+    height: 30px;
+    color: black;
+    background: rgb(86, 214, 60);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    font-weight: 700;
+}
+
+button {
+    cursor: pointer;
+    border: none
+}
+
+.change__section{
+    margin-top: 10px;
+}
+
+#make-purchase {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    gap: 10px;
+
+}
+
+button:hover {
+    background: rgb(116, 255, 88);
+}
+
+h1 {
+    background: rgb(238, 255, 0);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+h3{
+    text-align: center;
+}
+
+/* ------------------- END Right panel styles -----------------*/
+
+
+/* -------------------- Beginning Left Panel Styles ----------*/
+.items-grid__list {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    width: 50vw;
+    background: rgb(226, 225, 225);
+}
+
+.item h4 {
+    width: 100%;
+    height: 10%;
+    background: rgb(86, 214, 60);
+    top: auto;
+    text-align: center;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.item-name {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    text-align: center;
+    width: 90%;
+    height: 90%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.return-money__section {
+    margin-top: 10px;
+    justify-content: flex-start;
+}
+
+.item:hover::before,
+.item:hover::after {
+    opacity: 0.2;
+}
+
+.item:hover {
+    transform: translateY(-8px);
+    /* Aplica la transformación en hover */
+}
+
+.item::before,
+.item::after {
+    content: "";
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(208, 255, 0);
+    transition: opacity 0.3s;
+}
+
+.item h2,
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+input {
+    outline: none;
+}
+
+#return-money {
+    width: 100%;
+    height: 100%;
+}
+
+/* ------------------- END Left panel styles -----------------*/
+
+/* --------------------- 404 Page -------------------*/
+.not-found-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #333;
+    /* Fondo gris oscuro */
+    color: #fff;
+    /* Texto blanco */
+}
+
+.not-found-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    padding: 20px;
+    width: 100%;
+}
+
+.not-found-text {
+    flex: 1;
+}
+
+.not-found-heading {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.go-home-link {
+    color: #00ffcc;
+    /* Color de enlace */
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.go-home-link:hover {
+    text-decoration: underline;
+    /* Subrayado en hover */
+}
+
+.not-found-character {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eye {
+    background: #000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.mouth {
+    background: #000;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+.body {
+    background: #000;
+    width: 100px;
+    height: 150px;
+    border-radius: 15px 15px 100px 100px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .not-found-content {
+        flex-direction: column;
+    }
+}
