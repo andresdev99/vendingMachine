@@ -30,7 +30,6 @@ const TotalSection = () => {
 
     return (
         <div className="total__section section">
-            <h1>Total ${parseFloat(money).toFixed(2)}</h1>
             <input type="text" readOnly  value={parseFloat(money).toFixed(2)} />
             <div className='add-money'>
             {
@@ -46,7 +45,6 @@ const TotalSection = () => {
                 })
             }
             </div>
-            <hr />
         </div>
     )
 }

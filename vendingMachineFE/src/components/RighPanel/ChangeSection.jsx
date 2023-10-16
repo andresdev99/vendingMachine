@@ -7,7 +7,6 @@ const ChangeSection = () => {
     <div className='change__section section'>
         <h3>Change</h3>
           <input type="text" id='change' disabled value={change} />
-          <hr />
     </div>
   )
 }
