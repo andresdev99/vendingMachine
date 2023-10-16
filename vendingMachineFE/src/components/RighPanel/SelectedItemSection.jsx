@@ -10,6 +10,7 @@ const SelectedItemSection = () => {
           <input
               type="text"
               name='selectedItem'
+              id='selected-item'
               readOnly
               value={selectedItem} />
           <button
@@ -17,6 +18,7 @@ const SelectedItemSection = () => {
               className='selected-item-btn'>
               Make Purchase
           </button>
+          <hr />
       </div>
   )
 }

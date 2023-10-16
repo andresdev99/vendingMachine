@@ -1,32 +1,35 @@
 import React from 'react'
+import { purchaseItem } from '../../context/purchase'
 import { useStateContext } from '../../context/ContexProvider';
-import axiosClient from '../../axios-client';
 
 const FormBuy = ({ children }) => {
-    const { money, selectedItem, setItemAvailability, getItemInfo } = useStateContext();
+    const {
+        money,
+        selectedItem,
+        setItemAvailability,
+        getItemInfo,
+        setMessage,
+        setChange,
+        setMoney,
+        setReturnedMoney
+    } = useStateContext();
 
-    const onPurchase = (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
-        const payload = {
-            money: money,
-            item: getItemInfo(selectedItem)
-        }
-
-        axiosClient.post('/buyItem', payload)
-            .then(({ data }) => {
-                // setItemAvailability(data.availability);
-            })
-            .catch(err => {
-                const response = err.response;
-                if (response && response.status === 422) {
-                    console.log(response.data.errors);
-                }
-            })
-    }
+        purchaseItem(
+            money,
+            selectedItem,
+            setItemAvailability,
+            getItemInfo,
+            setMessage,
+            setChange,
+            setMoney,
+            setReturnedMoney
+        );
+      };
 
     return (
-        //
-        <form id='make-purchase' onSubmit={onPurchase}>
+        <form id='make-purchase' onSubmit={handleSubmit}>
             {children}
         </form>
     )
