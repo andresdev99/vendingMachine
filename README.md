@@ -38,8 +38,13 @@ Once you have verified the above requirements, follow these steps to set up the 
 
     ```sh
    npm install
+
+2. Install client-side (React.js with Vite) dependencies by running:
+
+    ```sh
+   npm install axios
     
-2. Start the Vite development server:
+3. Start the Vite development server:
 
     ```sh
    npm run dev
