@@ -65,20 +65,25 @@ Once you have verified the above requirements, follow these steps to set up the 
 ## Core features
 - Buttons to add money
 
-![Buttons](https://github.com/andrespro00/vendingMachine/assets/61853982/14db2da3-8082-4fd9-821b-1a1b8e44bb2c)
+![Buttons](https://github.com/andrespro00/vendingMachine/assets/61853982/92f922ff-4183-43ca-aae8-328e4653bc4d)
+
 
 - Messages when a purchase is done
 
-![Messages](https://github.com/andrespro00/vendingMachine/assets/61853982/6b604093-eea4-485d-be03-d29b78dc3981)
+![Messages](https://github.com/andrespro00/vendingMachine/assets/61853982/7100353b-0592-4802-ab42-db49fb6d67ce)
+
 
 - Purchase botton and selected item message
 
- ![Purchase](https://github.com/andrespro00/vendingMachine/assets/61853982/68b41389-aeaa-4679-b1fd-1926ee2d1dc7)
+![Purchase](https://github.com/andrespro00/vendingMachine/assets/61853982/93ad45fb-5ca8-4ae9-b3a1-b63d585ab465)
+
 
  - Change
 
-![Change](https://github.com/andrespro00/vendingMachine/assets/61853982/ec74d647-82f0-412b-8fbe-98f2c6d37d33)
+![Change](https://github.com/andrespro00/vendingMachine/assets/61853982/2054e594-bc31-4f62-8f55-77ea4bcd101c)
+
 
 - Return Money
 
-![Return](https://github.com/andrespro00/vendingMachine/assets/61853982/69ffaddf-27ad-48be-92e2-7d23ae89a35d)
+![Return](https://github.com/andrespro00/vendingMachine/assets/61853982/6fa3dce5-cff8-4e12-ada8-53536f534cc7)
+
