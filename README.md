@@ -1,66 +1,79 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Vending Machine Test
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Welcome to my Vending Machine Technical Test
+This is a Veniding Machine which you can buy any item just adding money on the predefined buttons
+You can acces to the App deployed on **Netlify** in the next [URL](https://laravel.com/docs/routing).
 
-## About Laravel
+## Requirements
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Make sure to meet the following requirements before you start working with this project.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Server Requirements (Laravel)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **PHP:** This project uses Laravel, which requires PHP. It is recommended to use PHP 8 or higher. You can check the installed PHP version with `php --version`.
 
-## Learning Laravel
+- **Composer:** Laravel uses Composer to manage dependencies. Make sure you have [Composer](https://getcomposer.org/) installed. You can check if Composer is installed with `composer --version`.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Client Requirements (React.js with Vite)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **Node.js:** The client part of this project uses React.js and Vite. Make sure you have [Node.js](https://nodejs.org/) installed. It is recommended to use Node.js v18.18.0 or higher. You can check the installed Node.js version with `node --version`.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **NPM:** Vite uses npm to manage project dependencies. Ensure you have [npm](https://www.npmjs.com/package/download#download) installed. You can check if npm is installed with `npm --version`.
+  
+- **Git:** To clone this repository, you need to have Git installed. If you don't have Git installed, you can download and install it from the [official website](https://git-scm.com/).
 
-## Laravel Sponsors
+### Project Setup/Run
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Once you have verified the above requirements, follow these steps to set up the project:
 
-### Premium Partners
+- Clone this repository to your system:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+   ```sh
+   git clone https://github.com/andrespro00/vendingMachine.git
+   
 
-## Contributing
+## Setup Frontend
+   
+1. Install client-side (React.js with Vite) dependencies by running:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    ```sh
+   npm install
+    
+2. Start the Vite development server:
 
-## Code of Conduct
+    ```sh
+   npm run dev
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+3. Open your web browser and go to [http://localhost:3000](http://localhost:3000) to view the frontend.
 
-## Security Vulnerabilities
+## Setup Backend
+1. Install server-side (Laravel) dependencies by running:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    ```sh
+   composer install
+2. Start Running the Laravel API:
 
-## License
+    ```sh
+   php artisan serve
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Core features
+- Buttons to add money
+
+![Buttons](https://github.com/andrespro00/vendingMachine/assets/61853982/14db2da3-8082-4fd9-821b-1a1b8e44bb2c)
+
+- Messages when a purchase is done
+
+![Messages](https://github.com/andrespro00/vendingMachine/assets/61853982/6b604093-eea4-485d-be03-d29b78dc3981)
+
+- Purchase botton and selected item message
+
+ ![Purchase](https://github.com/andrespro00/vendingMachine/assets/61853982/68b41389-aeaa-4679-b1fd-1926ee2d1dc7)
+
+ - Change
+
+![Change](https://github.com/andrespro00/vendingMachine/assets/61853982/ec74d647-82f0-412b-8fbe-98f2c6d37d33)
+
+- Return Money
+
+![Return](https://github.com/andrespro00/vendingMachine/assets/61853982/69ffaddf-27ad-48be-92e2-7d23ae89a35d)
