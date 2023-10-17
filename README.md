@@ -2,7 +2,6 @@
 
 Welcome to my Vending Machine Technical Test
 This is a Veniding Machine which you can buy any item just adding money on the predefined buttons
-You can acces to the App deployed on **Netlify** in the next [URL](https://laravel.com/docs/routing).
 
 ## Requirements
 
