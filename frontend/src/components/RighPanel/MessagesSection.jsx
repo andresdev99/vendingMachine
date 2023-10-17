@@ -11,7 +11,7 @@ const MessagesSection = () => {
             id='messages'
             disabled
             style={
-                message == "Insufficient money" || message == "No Availability"
+                message == "Insufficient money" || message == "No Availability" || message == "Select an item"
                 ? { color: 'red'}
                 : {}
         }

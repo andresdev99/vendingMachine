@@ -33,7 +33,7 @@ export const purchaseItem = (
         .catch(err => {
             const response = err.response;
             if (response && response.status === 422) {
-                console.log(response.data.errors);
+                setMessage("Select an item");
             }
         })
 
