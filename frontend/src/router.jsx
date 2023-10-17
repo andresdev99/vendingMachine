@@ -8,12 +8,12 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Navigate to={'/vendor-machine'} />
+                element: <Navigate to={'/vending-machine'} />
             }
         ]
     },
     {
-        path: '/vendor-machine',
+        path: '/vending-machine',
         element: <VendingMachine />,
     },
     {
