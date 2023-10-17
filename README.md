@@ -3,24 +3,6 @@
 Welcome to my Vending Machine Technical Test
 This is a Veniding Machine which you can buy any item just adding money on the predefined buttons
 
-## Requirements
-
-Make sure to meet the following requirements before you start working with this project.
-
-### Server Requirements (Laravel)
-
-- **PHP:** This project uses Laravel, which requires PHP. It is recommended to use PHP 8.1 or higher. You can check the installed PHP version with `php --version`.
-
-- **Composer:** Laravel uses Composer to manage dependencies. Make sure you have [Composer](https://getcomposer.org/) installed. You can check if Composer is installed with `composer --version`.
-
-### Client Requirements (React.js with Vite)
-
-- **Node.js:** The client part of this project uses React.js and Vite. Make sure you have [Node.js](https://nodejs.org/) installed. It is recommended to use Node.js v18.18.0 or higher. You can check the installed Node.js version with `node --version`.
-
-- **NPM:** Vite uses npm to manage project dependencies. Ensure you have [npm](https://www.npmjs.com/package/download#download) installed. You can check if npm is installed with `npm --version`.
-  
-- **Git:** To clone this repository, you need to have Git installed. If you don't have Git installed, you can download and install it from the [official website](https://git-scm.com/).
-
 ### Project Setup/Run
 
 Once you have verified the above requirements, follow these steps to set up the project:
@@ -38,6 +20,24 @@ Once you have verified the above requirements, follow these steps to set up the 
 
     ```sh
     docker-compose up --build
+
+## Requirements (**Without Docker**)
+
+Make sure to meet the following requirements before you start working with this project.
+
+### Server Requirements (Laravel)
+
+- **PHP:** This project uses Laravel, which requires PHP. It is recommended to use PHP 8.1 or higher. You can check the installed PHP version with `php --version`.
+
+- **Composer:** Laravel uses Composer to manage dependencies. Make sure you have [Composer](https://getcomposer.org/) installed. You can check if Composer is installed with `composer --version`.
+
+### Client Requirements (React.js with Vite)
+
+- **Node.js:** The client part of this project uses React.js and Vite. Make sure you have [Node.js](https://nodejs.org/) installed. It is recommended to use Node.js v18.18.0 or higher. You can check the installed Node.js version with `node --version`.
+
+- **NPM:** Vite uses npm to manage project dependencies. Ensure you have [npm](https://www.npmjs.com/package/download#download) installed. You can check if npm is installed with `npm --version`.
+  
+- **Git:** To clone this repository, you need to have Git installed. If you don't have Git installed, you can download and install it from the [official website](https://git-scm.com/).
 
 ## Setup Frontend (**Without Docker**)
    
