@@ -40,7 +40,7 @@ Once you have verified the above requirements, follow these steps to set up the 
     ```sh
     docker-compose up --build
 
-## Setup Frontend
+## Setup Frontend (**Without Docker**)
    
 1. Install client-side (React.js with Vite) dependencies by running:
 
@@ -59,7 +59,7 @@ Once you have verified the above requirements, follow these steps to set up the 
 
 3. Open your web browser and go to [http://localhost:3000](http://localhost:3000) to view the frontend.
 
-## Setup Backend
+## Setup Backend (**Without Docker**)
 1. Install server-side (Laravel) dependencies by running:
 
     ```sh
