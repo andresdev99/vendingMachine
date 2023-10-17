@@ -2,9 +2,26 @@
 
 Welcome to my Vending Machine Technical Test
 This is a Veniding Machine which you can buy any item just adding money on the predefined buttons
-You can acces to the App deployed on **Netlify** in the next [URL](https://laravel.com/docs/routing).
 
-## Requirements
+### Project Setup/Run
+
+Once you have verified the above requirements, follow these steps to set up the project:
+
+- Clone this repository to your system:
+
+   ```sh
+   git clone https://github.com/andrespro00/vendingMachine.git
+   
+## Setup by Docker
+- Go to the main folder
+  ```sh
+    cd vendingMachine
+- Install Backend and Frontend:
+
+    ```sh
+    docker-compose up --build
+
+## Requirements (**Without Docker**)
 
 Make sure to meet the following requirements before you start working with this project.
 
@@ -22,17 +39,7 @@ Make sure to meet the following requirements before you start working with this 
   
 - **Git:** To clone this repository, you need to have Git installed. If you don't have Git installed, you can download and install it from the [official website](https://git-scm.com/).
 
-### Project Setup/Run
-
-Once you have verified the above requirements, follow these steps to set up the project:
-
-- Clone this repository to your system:
-
-   ```sh
-   git clone https://github.com/andrespro00/vendingMachine.git
-   
-
-## Setup Frontend
+## Setup Frontend (**Without Docker**)
    
 1. Install client-side (React.js with Vite) dependencies by running:
 
@@ -51,7 +58,7 @@ Once you have verified the above requirements, follow these steps to set up the 
 
 3. Open your web browser and go to [http://localhost:3000](http://localhost:3000) to view the frontend.
 
-## Setup Backend
+## Setup Backend (**Without Docker**)
 1. Install server-side (Laravel) dependencies by running:
 
     ```sh
