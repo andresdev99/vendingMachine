@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    hostname: backend
+    ports:
+      - '8000:8000'
+    volumes:
+      - ./backend:/usr/src/backend
+    networks:
+      - default
+  
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - '3000:3000'
+    networks:
+      - default
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/usr/src/frontend
+      - '/usr/src/frontend/node_modules'
