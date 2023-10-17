@@ -31,6 +31,14 @@ Once you have verified the above requirements, follow these steps to set up the 
    ```sh
    git clone https://github.com/andrespro00/vendingMachine.git
    
+## Setup by Docker
+- Go to the main folder
+  ```sh
+    cd vendingMachine
+- Install Backend and Frontend:
+
+    ```sh
+    docker-compose up --build
 
 ## Setup Frontend
    
