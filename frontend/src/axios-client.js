@@ -4,8 +4,6 @@ const axiosClient = axios.create({
     baseURL: import.meta.env.VITE_API_BASE_URL
 })
 
-axiosClient.defaults.headers.common['Accept'] = 'application/json';
-axiosClient.defaults.headers.common['Content-Type'] = 'application/json'; 
 
 axiosClient.interceptors.request.use((config) => {
     return config;
