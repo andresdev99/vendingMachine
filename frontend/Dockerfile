@@ -10,7 +10,7 @@ RUN npm install
 
 RUN npm install axios
 
-RUN npm install react-scripts@5.0.1 -g --silent
+# RUN npm install react-scripts@5.0.1 -g --silent
 
 COPY . .
 
